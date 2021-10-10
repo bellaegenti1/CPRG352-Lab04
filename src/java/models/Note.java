@@ -16,12 +16,10 @@ public class Note implements Serializable {
     private String title;
     private String content;
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
+ 
+ public Note() {
+        this.title = "";
+        this.content = "";
     }
 
     public Note(String title, String content) {
@@ -29,8 +27,6 @@ public class Note implements Serializable {
         this.content = content;
     }
 
-    public Note() {
-    }
 
     public String getTitle() {
         return title;
@@ -40,9 +36,13 @@ public class Note implements Serializable {
         return content;
     }
 
-    @Override
-    public String toString() {
-        return "Note{" + "title=" + title + ", content=" + content + '}';
+ 
+       public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 
 }
